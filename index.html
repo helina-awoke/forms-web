@@ -1,98 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Training Forms Hub</title>
+  <meta charset="UTF-8">
+  <title> Forms Hub</title>
+  <style>
+    /* Full screen layout */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f2f5; /* light professional background */
+    }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-            margin: 0;
-            padding: 0;
-        }
+    /* Center content vertically */
+    .container {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
 
-        .container {
-            max-width: 700px;
-            margin: 50px auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            text-align: center;
-        }
+    /* Logo */
+    .logo {
+      width: 180px;
+      margin-bottom: 30px;
+    }
 
-        h1 {
-            color: #2c3e50;
-        }
+    /* Heading */
+    h1 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 15px;
+    }
 
-        p {
-            color: #555;
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
+    /* Description */
+    p.description {
+      color: #555;
+      max-width: 600px;
+      line-height: 1.6;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
 
-        .form-btn {
-            display: block;
-            margin: 15px auto;
-            padding: 15px;
-            width: 100%;
-            max-width: 400px;
-            background-color: #1a73e8;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: 0.3s;
-        }
+    /* Vertical button layout */
+    .button-container {
+      display: flex;
+      flex-direction: column; /* vertical buttons */
+      gap: 15px; /* space between buttons */
+      width: 250px; /* all buttons same width */
+    }
 
-        .form-btn:hover {
-            background-color: #0c56c5;
-        }
+    .button {
+      display: block;
+      padding: 14px 20px;
+      background-color: #d32f2f; /* red button */
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      text-align: center;
+    }
 
-        footer {
-            margin-top: 30px;
-            font-size: 13px;
-            color: #888;
-        }
-    </style>
+    .button:hover {
+      background-color: #b71c1c;
+    }
+
+    /* Footer */
+    footer {
+      font-size: 13px;
+      color: #777;
+      margin-top: 50px;
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 500px) {
+      .button-container {
+        width: 80%;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      p.description {
+        font-size: 16px;
+      }
+    }
+
+  </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Logo -->
+    <img src="logo.jpg" alt="Logo" class="logo">
 
-    <div class="container">
-        <h1>Training Forms Hub</h1>
+    <!-- Heading -->
+    <h1>Training Forms Hub</h1>
 
-        <p>
-            Please select the form you want to fill.<br>
-            After submitting a form, you can return here to fill another one.
-        </p>
+    <!-- Description -->
+    <p class="description">
+      Welcome! Select the form you want to fill from the options below. 
+      After submitting a form, you can return here to fill additional forms as needed.
+    </p>
 
-
-        <a class="form-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSevovOd1clH3wcFxu3Xa-5kxI056S2197YIlemQNsteLKrMbg/viewform?usp=header" target="_blank">
-            Form 1: Personal Information
-        </a>
-
-        <a class="form-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfcOCq09iG1wKYvpHxMzoc7drsorDspbYAsmQxPvy8bibbfnA/viewform?usp=header" target="_blank">
-            Form 2: Training Registration
-        </a>
-
-        <a class="form-btn" href="https://forms.gle/FORM3_LINK" target="_blank">
-            Form 3: Training Feedback
-        </a>
-
-        <a class="form-btn" href="https://forms.gle/FORM4_LINK" target="_blank">
-            Form 4: Attendance Confirmation
-        </a>
-
-        <a class="form-btn" href="https://forms.gle/FORM5_LINK" target="_blank">
-            Form 5: Post-Training Evaluation
-        </a>
-
-        <footer>
-            © 2026 JSI
-        </footer>
+    <!-- Buttons vertically -->
+    <div class="button-container">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfcOCq09iG1wKYvpHxMzoc7drsorDspbYAsmQxPvy8bibbfnA/viewform?usp=header" class="button">Personal Info Form</a>
+      <a href="https://forms.gle/Form2Link" class="button">Training Feedback Form</a>
+      <a href="https://forms.gle/Form3Link" class="button">Attendance Form</a>
+      <a href="https://forms.gle/Form4Link" class="button">Evaluation Form</a>
+      <a href="https://forms.gle/Form5Link" class="button">Other Forms</a>
     </div>
 
+    <!-- Footer -->
+    <footer>
+       For assistance, contact admin@example.com
+    </footer>
+  </div>
 </body>
 </html>
-
