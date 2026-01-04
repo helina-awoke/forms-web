@@ -2,17 +2,32 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title> Forms Hub</title>
+  <title>Forms Hub</title>
   <style>
     /* Full screen layout */
     html, body {
       height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f0f2f5; /* light professional background */
+      position: relative;
+      overflow: hidden;
     }
 
-    /* Center content vertically */
+    /* Blurry background using logo */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('logo.png') no-repeat center center;
+      background-size: cover;
+      filter: blur(20px) brightness(0.7); /* blur + dim for readability */
+      z-index: -1; /* behind everything */
+    }
+
+    /* Container content */
     .container {
       min-height: 100%;
       display: flex;
@@ -22,24 +37,32 @@
       padding: 40px 20px;
       box-sizing: border-box;
       text-align: center;
+      position: relative;
+      z-index: 1; /* ensure above background */
+      color: #fff; /* change text color for contrast */
     }
 
-    /* Logo */
-    .logo {
-      width: 180px;
-      margin-bottom: 30px;
+    /* Optional overlay to darken background for better readability */
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: -1;
+      border-radius: 0;
     }
 
     /* Heading */
     h1 {
       font-size: 32px;
-      color: #333;
       margin-bottom: 15px;
     }
 
     /* Description */
     p.description {
-      color: #555;
       max-width: 600px;
       line-height: 1.6;
       font-size: 18px;
@@ -49,15 +72,15 @@
     /* Vertical button layout */
     .button-container {
       display: flex;
-      flex-direction: column; /* vertical buttons */
-      gap: 15px; /* space between buttons */
-      width: 250px; /* all buttons same width */
+      flex-direction: column;
+      gap: 15px;
+      width: 250px;
     }
 
     .button {
       display: block;
       padding: 14px 20px;
-      background-color: #d32f2f; /* red button */
+      background-color: #d32f2f;
       color: white;
       text-decoration: none;
       border-radius: 8px;
@@ -74,8 +97,8 @@
     /* Footer */
     footer {
       font-size: 13px;
-      color: #777;
       margin-top: 50px;
+      color: #ddd;
     }
 
     /* Responsive for small screens */
@@ -90,16 +113,12 @@
         font-size: 16px;
       }
     }
-
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Logo -->
-    <img src="logo.jpg" alt="Logo" class="logo">
-
     <!-- Heading -->
-    <h1>Forms Hub</h1>
+    <h1>Training Forms Hub</h1>
 
     <!-- Description -->
     <p class="description">
@@ -123,4 +142,3 @@
   </div>
 </body>
 </html>
-
