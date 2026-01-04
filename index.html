@@ -9,26 +9,36 @@
       height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
-      position: relative;
       overflow: hidden;
     }
 
-    /* Blurry background using logo */
-    body::before {
-      content: "";
+    /* Blurred background with logo */
+    body {
+      background: url('logo.png') center center / cover no-repeat;
+      filter: blur(15px); /* blur the background */
       position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-      background: url('logo.png') no-repeat center center;
-      background-size: cover;
-      filter: blur(20px) brightness(0.7); /* blur + dim for readability */
-      z-index: -1; /* behind everything */
+      top: 0;
+      left: 0;
+      z-index: -1; /* behind all content */
+    }
+
+    /* Overlay to darken and improve readability */
+    .overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
     }
 
     /* Container content */
     .container {
+      position: relative;
+      z-index: 1; /* above background & overlay */
       min-height: 100%;
       display: flex;
       flex-direction: column;
@@ -37,31 +47,14 @@
       padding: 40px 20px;
       box-sizing: border-box;
       text-align: center;
-      position: relative;
-      z-index: 1; /* ensure above background */
-      color: #fff; /* change text color for contrast */
+      color: #fff;
     }
 
-    /* Optional overlay to darken background for better readability */
-    .container::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.4);
-      z-index: -1;
-      border-radius: 0;
-    }
-
-    /* Heading */
     h1 {
       font-size: 32px;
       margin-bottom: 15px;
     }
 
-    /* Description */
     p.description {
       max-width: 600px;
       line-height: 1.6;
@@ -69,7 +62,6 @@
       margin-bottom: 40px;
     }
 
-    /* Vertical button layout */
     .button-container {
       display: flex;
       flex-direction: column;
@@ -94,14 +86,12 @@
       background-color: #b71c1c;
     }
 
-    /* Footer */
     footer {
       font-size: 13px;
       margin-top: 50px;
       color: #ddd;
     }
 
-    /* Responsive for small screens */
     @media (max-width: 500px) {
       .button-container {
         width: 80%;
@@ -116,6 +106,9 @@
   </style>
 </head>
 <body>
+  <!-- Overlay for readability -->
+  <div class="overlay"></div>
+
   <div class="container">
     <!-- Heading -->
     <h1>Training Forms Hub</h1>
