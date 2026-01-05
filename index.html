@@ -2,32 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> Forms Hub</title>
+  <title>Training Forms Hub</title>
   <style>
-    /* Full screen layout with background logo */
+    /* Full screen layout */
     html, body {
       height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('https://raw.githubusercontent.com/USERNAME/REPO/main/logo.jpg') no-repeat center center fixed;
-      background-size: contain; /* makes the logo fit nicely */
-      background-color: #f0f2f5; /* fallback color if image not loaded */
-      background-blend-mode: lighten; /* optional, for subtle effect */
-    }
-
-    /* Optional: blur effect */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://raw.githubusercontent.com/USERNAME/REPO/main/logo.jpg') no-repeat center center;
-      background-size: contain;
-      filter: blur(5px);
-      opacity: 0.1; /* adjust visibility */
-      z-index: -1; /* behind all content */
+      background-color: #f0f2f5; /* gray background */
     }
 
     /* Center content vertically */
@@ -40,9 +22,13 @@
       padding: 40px 20px;
       box-sizing: border-box;
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.85); /* semi-transparent content box */
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    /* Logo */
+    .logo {
+      width: 180px;
+      margin-bottom: 30px;
+      display: block;
     }
 
     /* Heading */
@@ -61,7 +47,7 @@
       margin-bottom: 40px;
     }
 
-    /* Buttons vertically */
+    /* Vertical button layout */
     .button-container {
       display: flex;
       flex-direction: column;
@@ -93,7 +79,7 @@
       margin-top: 50px;
     }
 
-    /* Responsive for small screens */
+    /* Responsive */
     @media (max-width: 500px) {
       .button-container {
         width: 80%;
@@ -105,13 +91,15 @@
         font-size: 16px;
       }
     }
-
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Logo -->
+    <img src="Logo.jpg" alt="Logo" class="logo">
+
     <!-- Heading -->
-    <h1> Forms Hub</h1>
+    <h1>Training Forms Hub</h1>
 
     <!-- Description -->
     <p class="description">
@@ -121,7 +109,7 @@
 
     <!-- Buttons vertically -->
     <div class="button-container">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhYiZYeTO_JTrIH6ixsiTfILUPbd4U65d22v4RuQC1ISafKA/viewform?usp=header" class="button">HIS/DH</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCzFW4yVxKUXO8ZrhMBEY_7g6HCoCJTJhWszclvv5jo2dhaQ/viewform?usp=header" class="button">HIS/DH</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhYiZYeTO_JTrIH6ixsiTfILUPbd4U65d22v4RuQC1ISafKA/viewform?usp=header" class="button">CD-NTD</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSds7raEQWIWnWV3DZsZ-Tk_iba4KN7oUUJabRUjqUa67IwBmA/viewform?usp=header" class="button">Final Policy & LMG</a>
       <a href="https://forms.gle/Form4Link" class="button">Evaluation Form</a>
@@ -130,10 +118,11 @@
 
     <!-- Footer -->
     <footer>
-      Thank you for using the g Forms Hub. For assistance, contact admin@example.com
+      Thank you for using the Forms Hub. For assistance, contact admin@example.com
     </footer>
   </div>
 </body>
 </html>
+
 
 
