@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Training Forms Hub</title>
   <style>
-    /* Full screen layout */
+    /* Full screen layout with background logo */
     html, body {
       height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f0f2f5; /* light professional background */
+      background: url('https://raw.githubusercontent.com/USERNAME/REPO/main/logo.jpg') no-repeat center center fixed;
+      background-size: contain; /* makes the logo fit nicely */
+      background-color: #f0f2f5; /* fallback color if image not loaded */
+      background-blend-mode: lighten; /* optional, for subtle effect */
+    }
+
+    /* Optional: blur effect */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://raw.githubusercontent.com/USERNAME/REPO/main/logo.jpg') no-repeat center center;
+      background-size: contain;
+      filter: blur(5px);
+      opacity: 0.1; /* adjust visibility */
+      z-index: -1; /* behind all content */
     }
 
     /* Center content vertically */
@@ -22,12 +40,9 @@
       padding: 40px 20px;
       box-sizing: border-box;
       text-align: center;
-    }
-
-    /* Logo */
-    .logo {
-      width: 180px;
-      margin-bottom: 30px;
+      background-color: rgba(255, 255, 255, 0.85); /* semi-transparent content box */
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
 
     /* Heading */
@@ -46,18 +61,18 @@
       margin-bottom: 40px;
     }
 
-    /* Vertical button layout */
+    /* Buttons vertically */
     .button-container {
       display: flex;
-      flex-direction: column; /* vertical buttons */
-      gap: 15px; /* space between buttons */
-      width: 250px; /* all buttons same width */
+      flex-direction: column;
+      gap: 15px;
+      width: 250px;
     }
 
     .button {
       display: block;
       padding: 14px 20px;
-      background-color: #d32f2f; /* red button */
+      background-color: #d32f2f;
       color: white;
       text-decoration: none;
       border-radius: 8px;
@@ -95,9 +110,6 @@
 </head>
 <body>
   <div class="container">
-    <!-- Logo -->
-    <img src="logo.jpg" alt="Logo" class="logo">
-
     <!-- Heading -->
     <h1>Training Forms Hub</h1>
 
@@ -123,4 +135,3 @@
   </div>
 </body>
 </html>
-
