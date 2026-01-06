@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Training Forms Hub</title>
+  <title>Research Prioritization Criteria for Integrated National Health Research Agenda</title>
   <style>
     /* Full screen layout */
     html, body {
       height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f0f2f5; /* gray background */
+      background-color: #f0f2f5; /* solid professional gray */
     }
 
     /* Center content vertically */
@@ -27,59 +27,92 @@
     /* Logo */
     .logo {
       width: 180px;
+      height: auto; /* keep aspect ratio */
       margin-bottom: 30px;
       display: block;
+      border-radius: 8px; /* optional: rounded corners */
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* subtle shadow */
+      object-fit: contain;
     }
 
-    /* Heading */
+    /* Title with sliding animation */
     h1 {
-      font-size: 32px;
-      color: #333;
+      font-size: 34px;
+      color: #1976d2; /* blue */
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      position: relative;
+      animation: marquee 30s linear infinite;
       margin-bottom: 15px;
+    }
+
+    @keyframes marquee {
+      0% { left: 100%; }
+      50% { left: -100%; }
+      100% { left: 100%; }
     }
 
     /* Description */
     p.description {
       color: #555;
-      max-width: 600px;
-      line-height: 1.6;
-      font-size: 18px;
-      margin-bottom: 40px;
+      max-width: 90%;
+      line-height: 1.8;
+      font-size: 19px;
+      margin-bottom: 25px;
+      text-align: center;
     }
 
-    /* Vertical button layout */
+    /* Buttons vertically */
     .button-container {
       display: flex;
       flex-direction: column;
       gap: 15px;
       width: 250px;
+      margin-top: 20px;
     }
 
     .button {
       display: block;
       padding: 14px 20px;
-      background-color: #d32f2f;
+      background-color: #1976d2; /* blue */
       color: white;
       text-decoration: none;
       border-radius: 8px;
       font-size: 16px;
       font-weight: bold;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
       text-align: center;
     }
 
     .button:hover {
-      background-color: #b71c1c;
+      background-color: #0d47a1;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
 
     /* Footer */
-    footer {
-      font-size: 13px;
-      color: #777;
-      margin-top: 50px;
+    hr.divider {
+      width: 60%;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 40px auto 20px auto;
     }
 
-    /* Responsive */
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+      width: 100%;
+    }
+
+    footer a {
+      color: #1976d2;
+      text-decoration: none;
+    }
+
+    /* Responsive for small screens */
     @media (max-width: 500px) {
       .button-container {
         width: 80%;
@@ -88,7 +121,7 @@
         font-size: 28px;
       }
       p.description {
-        font-size: 16px;
+        font-size: 17px;
       }
     }
   </style>
@@ -98,31 +131,35 @@
     <!-- Logo -->
     <img src="Logo.jpg" alt="Logo" class="logo">
 
-    <!-- Heading -->
-    <h1>Training Forms Hub</h1>
+    <!-- Title -->
+    <h1>Research Prioritization Criteria for Integrated National Health Research Agenda</h1>
 
     <!-- Description -->
     <p class="description">
-      Welcome! Select the form you want to fill from the options below. 
-      After submitting a form, you can return here to fill additional forms as needed.
+      Welcome to the Ministry of Health (MOH) National Research Prioritization Selection Platform. To proceed, please select a thematic area from the options below and complete the required forms under the corresponding MOH Research Thematic Area.<br><br>
+      <strong>Submission Instructions:</strong><br>
+      1. Complete all nine forms sequentially, following the designated order.<br>
+      2. After submitting each form, use the return link on the submission confirmation page to return to this page and continue with the next form.
     </p>
 
     <!-- Buttons vertically -->
     <div class="button-container">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCzFW4yVxKUXO8ZrhMBEY_7g6HCoCJTJhWszclvv5jo2dhaQ/viewform?usp=header" class="button">HIS/DH</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhYiZYeTO_JTrIH6ixsiTfILUPbd4U65d22v4RuQC1ISafKA/viewform?usp=header" class="button">CD-NTD</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSds7raEQWIWnWV3DZsZ-Tk_iba4KN7oUUJabRUjqUa67IwBmA/viewform?usp=header" class="button">Final Policy & LMG</a>
-      <a href="https://forms.gle/Form4Link" class="button">Evaluation Form</a>
-      <a href="https://forms.gle/Form5Link" class="button">Other Forms</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCzFW4yVxKUXO8ZrhMBEY_7g6HCoCJTJhWszclvv5jo2dhaQ/viewform?usp=header" class="button">1. HIS/DH</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhYiZYeTO_JTrIH6ixsiTfILUPbd4U65d22v4RuQC1ISafKA/viewform?usp=header" class="button">2. CD-NTD</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSds7raEQWIWnWV3DZsZ-Tk_iba4KN7oUUJabRUjqUa67IwBmA/viewform?usp=header" class="button">3. Final Policy & LMG</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDtrIi313JlU3Wg_b19TSU3yjjU_IaiSbVIgejkVCkZrTvkA/viewform?usp=header" class="button">4. HRH</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeySXQtuO3rztW2-Kh82k2p7xz8_xcpoRRBFLxkjkasc4WXog/viewform?usp=publish-editor" class="button">5. Innovation and HSPCM</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvNtv78SFU9vBjMirIWHpbS2vvsELbHYtytKvpI1e30tcrMg/viewform?usp=publish-editor" class="button">6. NCD</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScUiMDYPoAqdeHHDtfV26o0fZ18QyfqxDdMrd1rs8Z_W0MaFg/viewform?usp=header" class="button">7. RMNCHAYH/EPI/Nutrition</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSerN1PZY4xjWSKcjXxS-f_EJIwQ_0CGRqi0bo7uhialEXA3gQ/viewform?usp=header" class="button">8. Service Delivery</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScf3MR9T-3GOHLTkKpzLZefh71wdV1eTN7s-Zz9Cvv48wqfFw/viewform?usp=header" class="button">9. Environment</a>
     </div>
 
     <!-- Footer -->
+    <hr class="divider">
     <footer>
-      Thank you for using the Forms Hub. For assistance, contact admin@example.com
+      &copy; 2026 Research Prioritization Hub. For assistance, contact <a href="mailto:abebaw.gebeyehu@moh.gov.et">abebaw.gebeyehu@moh.gov.et</a>
     </footer>
   </div>
 </body>
 </html>
-
-
-
